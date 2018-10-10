@@ -1,4 +1,6 @@
 html {
+  flex-shrink: 0;
+  display: block;
   font-family: Helvetica;
   font-size: 22px;
   color: seashell;
@@ -17,20 +19,27 @@ body {
 
 }
 
- header {
+ .header {
 width: 100%;
-position: sticky;
-z-index: 1;
-height: 69px;
+position: fixed;
+top: 0;
+height: 65px;
 background-color: black;
 border-bottom: 1px solid seashell;
 align-items: center;
 
 }
 
-header img {
-  height: 50px;
-  padding-left: 10px;
+.header img {
+    float: left;
+    height: 50px;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 10px;
+    line-height: 15px;
+    border-radius: 4px;
+  }
 
 }
 
@@ -53,10 +62,15 @@ a {
 
 }
 
-nav {
+.navbar {
+  float: right;
   display: block;
-  text-align: right;
-  flex-grow: 1
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 22px;
+}
 
 }
 
@@ -99,6 +113,7 @@ nav span {
 }
 
 #store {
+  flex-shrink: 0;
   height: 700px;
   width: 1000px;
   margin: auto;
@@ -121,6 +136,7 @@ nav span {
 /*Location*/
 
 #locations {
+  flex-shrink: 0;
     display: flex;
     background-image: url('../images/img-locations-background.jpg');
     height: 500px;
@@ -144,10 +160,11 @@ nav span {
 
 }
 
-.main {
+.content {
     padding-top: 69px;
     opacity: 0.9;
     width: 1200px;
+    height: auto;
     margin: auto;
 
 }
@@ -185,6 +202,7 @@ h2 {
     /* Contact*/
 
     #contact {
+      flex-shrink: 0;
     height: 200px;
 
 }
