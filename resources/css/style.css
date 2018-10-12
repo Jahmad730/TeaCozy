@@ -19,6 +19,10 @@ body {
 
 }
 
+div {
+  display: block;
+}
+
  .header {
 width: 100%;
 position: fixed;
@@ -45,10 +49,9 @@ align-items: center;
 }
 
 .flex-container {
-  position: relative;
+  justify-content: center;
   display: flex;
-justify-content: center;
-flex-wrap: wrap;
+  flex-wrap: wrap;
 
 }
 
@@ -114,14 +117,15 @@ nav span {
 }
 
 #store {
-  display: flex;
-  flex-shrink: 0;
+
   height: 700px;
   width: 1000px;
   margin: auto;
   padding-top: 70px;
-
+  display: flex;
+  flex-direction: row;
 }
+
 
 .item {
   padding: 5px;
@@ -131,30 +135,32 @@ nav span {
 .item img {
   height: 200px;
   margin: 10px;
-  display: flex;
-  flex-direction: row;
+  display: block;
+
+}
+
+.item span {
+  display: block;
+  padding: 5px;
+  font-weight: bold;
+  text-align: center;
 
 }
 
 /*Location*/
 
 #locations {
-  flex-shrink: 0;
-    display: flex;
     background-image: url('../images/img-locations-background.jpg');
     height: 500px;
     padding-top: 70px;
-    margin: 0 auto;
-    flex-direction: column;
-    padding-top: 70px;
-    align-items: center;
-    justify-content: center;
 
 }
 
 #locations .flex-container {
   margin: auto;
   width: 1100px;
+  display: flex;
+  flex-direction: row;
 
 }
 
@@ -174,6 +180,7 @@ nav span {
 
 
 .location {
+    width: 300px;
     opacity: 1.0;
     padding: 10px;
     margin: 5px 20px;
@@ -205,8 +212,6 @@ h2 {
     /* Contact*/
 
     #contact {
-      display: flex;
-      flex-shrink: 0;
     height: 200px;
 
 }
